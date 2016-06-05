@@ -2,7 +2,7 @@
 
 The term "comet" refers to web techniques that allow servers to push data to a web browser.  This is in contrast to HTTP's poll-only REST architecture.
 
-One way to simulate push behavior via HTTP is to use a long poll: an HTTP request which waits for some even before responding.
+One way to simulate push behavior via HTTP is to use a long poll: an HTTP request which waits for some event before responding.
 
 Long-polling via XMLHttpRequest is straightforward.  Basically, the client polls the server like normal.  The server will not reply until a corresponding event has occurred.  When the server finally responds, a client-side callback is triggered, and another request is immediately.  This simple helper function demonstrates the idea:
 
